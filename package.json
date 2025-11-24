@@ -9,17 +9,17 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
-  "dependencies": {
+  "peerDependencies": {
     "nuxt": "^4.2.0",
-    "@norbiros/nuxt-auto-form": "^0.5.0",
     "@nuxt/ui": "^4.1.0",
-    "dot-env": "^0.0.1",
+    "@norbiros/nuxt-auto-form": "^0.5.0",
     "vue": "^3.5.22",
     "vue-router": "^4.6.3",
     "zod": "^4.1.12"
   },
   "devDependencies": {
     "@types/node": "^24.9.2",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "dot-env": "^0.0.1"
   }
 }

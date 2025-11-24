@@ -370,6 +370,31 @@ export default defineNuxtConfig({
 })
 ```
 
+### Required Dependencies
+
+When using this layer, you must install the following peer dependencies in your consuming project:
+
+```json
+{
+  "dependencies": {
+    "nuxt": "^4.2.0",
+    "@nuxt/ui": "^4.1.0",
+    "@norbiros/nuxt-auto-form": "^0.5.0",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3",
+    "zod": "^4.1.12"
+  }
+}
+```
+
+Install them with:
+
+```bash
+npm install nuxt@^4.2.0 @nuxt/ui@^4.1.0 @norbiros/nuxt-auto-form@^0.5.0 vue@^3.5.22 vue-router@^4.6.3 zod@^4.1.12
+```
+
+**Note:** These dependencies are not automatically installed when you extend from this layer. Your project must have them installed for the layer to function correctly.
+
 ### What You Inherit
 
 Your project automatically inherits:
