@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+@import "./basetheme.css";
+
+/* Ensure NuxtLoadingIndicator is visible on top of everything */
+.nuxt-loading-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  pointer-events: none;
+}

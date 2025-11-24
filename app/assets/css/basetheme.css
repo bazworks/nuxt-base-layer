@@ -1,0 +1,215 @@
+/* basetheme.css - Custom color theme definitions */
+
+/* -----------------------------
+   1) LIGHT MODE COLOR FAMILIES
+   Define scales with @theme so Tailwind & Nuxt UI can consume them.
+   ----------------------------- */
+@theme static {
+  /* PRIMARY (brand) — base #338CB4 */
+  --color-primary-50: #f1f9fc;
+  --color-primary-100: #d9eef7;
+  --color-primary-200: #b2ddf0;
+  --color-primary-300: #8ccbe8;
+  --color-primary-400: #5fb2d8;
+  --color-primary-500: #338cb4; /* base */
+  --color-primary-600: #2c7a9d;
+  --color-primary-700: #256985;
+  --color-primary-800: #1d5266;
+  --color-primary-900: #143948;
+  --color-primary-950: #0f2a36;
+
+  /* SECONDARY (deeper complementary blue) */
+  --color-secondary-50: #f3fafc;
+  --color-secondary-100: #d8eef5;
+  --color-secondary-200: #aedbea;
+  --color-secondary-300: #7cc2d8;
+  --color-secondary-400: #4fa4c0;
+  --color-secondary-500: #256d8d;
+  --color-secondary-600: #1f5a76;
+  --color-secondary-700: #18485e;
+  --color-secondary-800: #123648;
+  --color-secondary-900: #0b2330;
+  --color-secondary-950: #081824;
+
+  /* NEUTRAL (slate-ish) */
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-900: #111827;
+  --color-neutral-950: #0b0f14;
+
+  /* INFO (cool blue-cyan) */
+  --color-info-50: #f0f8fc;
+  --color-info-100: #d9eef9;
+  --color-info-200: #b9e0f3;
+  --color-info-300: #8ccbe8;
+  --color-info-400: #5fb5de;
+  --color-info-500: #3bafda; /* base */
+  --color-info-600: #2b92b6;
+  --color-info-700: #237a98;
+  --color-info-800: #1c5f76;
+  --color-info-900: #144252;
+  --color-info-950: #0e2e38;
+
+  /* SUCCESS (emerald-ish) */
+  --color-success-50: #f1fbf6;
+  --color-success-100: #d9f4e6;
+  --color-success-200: #b4e8cf;
+  --color-success-300: #86dab3;
+  --color-success-400: #5bc897;
+  --color-success-500: #3ba776; /* base */
+  --color-success-600: #2f8c62;
+  --color-success-700: #267151;
+  --color-success-800: #1d5740;
+  --color-success-900: #153c2d;
+  --color-success-950: #0f2b21;
+
+  /* WARNING (amber-ish) */
+  --color-warning-50: #fffaed;
+  --color-warning-100: #fef0c7;
+  --color-warning-200: #fde58a;
+  --color-warning-300: #fad568;
+  --color-warning-400: #f0c24f;
+  --color-warning-500: #e9b949; /* base */
+  --color-warning-600: #d39f2f;
+  --color-warning-700: #b38223;
+  --color-warning-800: #8c631b;
+  --color-warning-900: #614414;
+  --color-warning-950: #422f0e;
+
+  /* ERROR (modern red) */
+  --color-error-50: #fff1f2;
+  --color-error-100: #ffe0e3;
+  --color-error-200: #ffc2c7;
+  --color-error-300: #ff969f;
+  --color-error-400: #f36e77;
+  --color-error-500: #d64550; /* base */
+  --color-error-600: #b8323c;
+  --color-error-700: #992933;
+  --color-error-800: #7a2129;
+  --color-error-900: #55171d;
+  --color-error-950: #3a1014;
+}
+
+/* Optional: derive global surfaces/text from neutral (light) */
+:root {
+  --color-surface: var(--color-neutral-50);
+  --color-bg: var(--color-neutral-100);
+  --color-text: var(--color-neutral-900);
+}
+
+/* -----------------------------
+   2) DARK MODE OVERRIDES
+   Redefine the SAME variables under `.dark` for tuned dark-mode tones.
+   ----------------------------- */
+.dark {
+  /* PRIMARY (brighter for contrast) */
+  --color-primary-50: #0b2230;
+  --color-primary-100: #10303f;
+  --color-primary-200: #18455b;
+  --color-primary-300: #1e5873;
+  --color-primary-400: #256d8d;
+  --color-primary-500: #4eb8e0; /* dark-mode base accent */
+  --color-primary-600: #6ac7e8;
+  --color-primary-700: #8ad6ee;
+  --color-primary-800: #a9e2f3;
+  --color-primary-900: #d4f2fa;
+  --color-primary-950: #e9f8fd;
+
+  /* SECONDARY (lifted luminance) */
+  --color-secondary-50: #0b1820;
+  --color-secondary-100: #0f2330;
+  --color-secondary-200: #153043;
+  --color-secondary-300: #1b4057;
+  --color-secondary-400: #21526e;
+  --color-secondary-500: #63b3d2; /* brighter accent */
+  --color-secondary-600: #7fc1da;
+  --color-secondary-700: #9bd0e3;
+  --color-secondary-800: #b7deea;
+  --color-secondary-900: #d7ecf3;
+  --color-secondary-950: #eaf6fa;
+
+  /* NEUTRAL (deep surfaces, light text) */
+  --color-neutral-50: #0b0f14; /* page bg */
+  --color-neutral-100: #111827; /* app surface */
+  --color-neutral-200: #1e293b;
+  --color-neutral-300: #334155;
+  --color-neutral-400: #475569;
+  --color-neutral-500: #64748b; /* secondary text */
+  --color-neutral-600: #94a3b8; /* default text */
+  --color-neutral-700: #cbd5e1; /* headings */
+  --color-neutral-800: #e2e8f0;
+  --color-neutral-900: #f1f5f9;
+  --color-neutral-950: #f7fafc;
+
+  /* INFO (brighter blues) */
+  --color-info-50: #0c1f2a;
+  --color-info-100: #0f2a38;
+  --color-info-200: #163c51;
+  --color-info-300: #1d4f6a;
+  --color-info-400: #236589;
+  --color-info-500: #5ecdf0; /* dark-mode base */
+  --color-info-600: #7bdaf4;
+  --color-info-700: #99e5f7;
+  --color-info-800: #b8eefa;
+  --color-info-900: #dbf7fd;
+  --color-info-950: #ecfbfe;
+
+  /* SUCCESS (lifted emerald) */
+  --color-success-50: #0b1a14;
+  --color-success-100: #0e251a;
+  --color-success-200: #143426;
+  --color-success-300: #184233;
+  --color-success-400: #1d5341;
+  --color-success-500: #4cc38a; /* dark-mode base */
+  --color-success-600: #6ad19f;
+  --color-success-700: #8bdfb5;
+  --color-success-800: #b1edcd;
+  --color-success-900: #d7f7e6;
+  --color-success-950: #ecfbf4;
+
+  /* WARNING (softer amber) */
+  --color-warning-50: #1a1406;
+  --color-warning-100: #241a07;
+  --color-warning-200: #32240a;
+  --color-warning-300: #44310e;
+  --color-warning-400: #5a4214;
+  --color-warning-500: #f2ca66; /* dark-mode base */
+  --color-warning-600: #f5d684;
+  --color-warning-700: #f8e2a5;
+  --color-warning-800: #faedc7;
+  --color-warning-900: #fcf6e1;
+  --color-warning-950: #fefbf2;
+
+  /* ERROR (softer red) */
+  --color-error-50: #22090b;
+  --color-error-100: #2e0c0f;
+  --color-error-200: #401217;
+  --color-error-300: #551820;
+  --color-error-400: #6e212b;
+  --color-error-500: #f0727a; /* dark-mode base */
+  --color-error-600: #f39198;
+  --color-error-700: #f6aeb4;
+  --color-error-800: #f9cbcd;
+  --color-error-900: #fbe2e5;
+  --color-error-950: #fdf1f3;
+
+  /* Optional derived surfaces/text for dark */
+  --color-surface: var(--color-neutral-100);
+  --color-bg: var(--color-neutral-50);
+  --color-text: var(--color-neutral-700);
+}
+
+/* Base app background & text (optional) */
+html,
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
