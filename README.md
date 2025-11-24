@@ -31,6 +31,29 @@ npm run build
 
 Visit `http://localhost:3000/theme` to see the complete theme showcase.
 
+## Important: App Setup
+
+For pages to display correctly, ensure your [app/app.vue](app/app.vue) file includes the following structure:
+
+```vue
+<template>
+  <UApp>
+    <NuxtLoadingIndicator :height="3" :duration="3000" :throttle="200" />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
+  </UApp>
+</template>
+```
+
+This structure is essential because:
+- `<UApp>` provides the Nuxt UI application wrapper
+- `<NuxtLoadingIndicator>` shows progress during page transitions
+- `<NuxtLayout>` enables layout support
+- `<NuxtPage>` renders your page components
+
+Without this setup, pages won't render properly in your application.
+
 ## What's Included
 
 ### Project Structure

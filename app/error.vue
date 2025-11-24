@@ -1,5 +1,6 @@
 <template>
   <div class="min-h-screen flex items-center justify-center p-6">
+    <ClientOnly>
     <UCard class="max-w-2xl w-full">
       <template #header>
         <div class="flex items-center gap-3">
@@ -24,6 +25,7 @@
         </div>
       </div>
     </UCard>
+    </ClientOnly>
   </div>
 </template>
 
